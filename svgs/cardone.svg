@@ -1,0 +1,13 @@
+<svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Globe outer circle centered at bottom, overflowing edges -->
+  <circle cx="120" cy="180" r="95" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+  
+  <!-- Continent 1 (Left - Americas outline) -->
+  <path d="M 35 150 C 40 135, 50 130, 60 140 C 70 150, 75 140, 80 155 C 83 165, 70 180, 60 185 C 45 190, 30 175, 30 160 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Continent 2 (Middle - Europe/Africa outline) -->
+  <path d="M 105 110 C 115 95, 130 90, 140 100 C 145 110, 130 120, 145 130 C 160 140, 175 135, 180 145 C 185 155, 170 175, 160 180 C 145 185, 135 170, 130 185 C 125 195, 110 190, 105 175 C 100 160, 110 135, 105 110 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Continent 3 (Right - Asia outline segment) -->
+  <path d="M 205 125 C 210 115, 220 110, 225 120 C 230 130, 215 140, 220 150 C 225 160, 215 175, 205 165 C 195 155, 200 135, 205 125 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+</svg>

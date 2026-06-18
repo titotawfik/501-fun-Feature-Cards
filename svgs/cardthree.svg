@@ -1,0 +1,34 @@
+<svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Dart Body (sloping downwards from left to right, tip on the left) -->
+  
+  <!-- Needle tip (Left-most) -->
+  <path d="M 5 95 L 45 108" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+  
+  <!-- Tip-to-barrel collar -->
+  <path d="M 45 108 L 55 111" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+
+  <!-- Barrel (with grip ridges) -->
+  <path d="M 55 111 L 110 128" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+  <!-- Grip ridge lines -->
+  <path d="M 65 110 L 68 119" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  <path d="M 75 113 L 78 122" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  <path d="M 85 116 L 88 125" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  <path d="M 95 119 L 98 128" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+
+  <!-- Shaft (Thin rod) -->
+  <path d="M 110 128 L 180 150" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Flights (Right-most wings) -->
+  <!-- Upper wing -->
+  <path d="M 180 150 L 210 135 L 225 150 L 195 155 Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+  <!-- Lower wing -->
+  <path d="M 180 150 L 190 178 L 220 175 L 205 158 Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+  <!-- Flight details (texture lines inside wings) -->
+  <path d="M 190 145 L 205 138" stroke="currentColor" stroke-width="2"/>
+  <path d="M 197 151 L 212 144" stroke="currentColor" stroke-width="2"/>
+  <path d="M 188 165 L 198 175" stroke="currentColor" stroke-width="2"/>
+  <path d="M 195 160 L 208 171" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Flight tail cap -->
+  <path d="M 180 150 L 225 163" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+</svg>
