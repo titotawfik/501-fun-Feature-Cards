@@ -1,0 +1,194 @@
+/* ============================================================
+   501 Entertainment – Feature Cards
+   Design system & layout styles
+   ============================================================
+
+   Structure:
+     :root              – Design tokens (colours, typography)
+     Theme modifiers    – Per-card colour mappings
+     Reset              – Minimal box-model reset
+     Layout             – Page, section, grid
+     .feature-card      – Card block
+     .feature-card__*   – Card elements
+     Responsive         – Mobile adjustments
+   ============================================================ */
+
+
+/* ── Design Tokens ───────────────────────────────────────── */
+:root {
+  /* Card colour themes
+     Designers: edit only this block to change card colours.
+     Each theme maps to a --green / --magenta / --cyan modifier class. */
+  --theme-green-bg:      #00ff00;
+  --theme-green-text:    #000000;
+  --theme-green-accent:  #000000;
+
+  --theme-magenta-bg:    #ff00b3;
+  --theme-magenta-text:  #000000;
+  --theme-magenta-accent:#000000;
+
+  --theme-cyan-bg:       #0084ff;
+  --theme-cyan-text:     #000000;
+  --theme-cyan-accent:   #000000;
+
+  /* Page chrome */
+  --page-bg:        #0d041c;
+  --section-bg:     #17002f;
+  --header-color:   #ffffff;
+  --subtitle-color: #c0acd9;
+
+  /* Typography */
+  --font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+
+/* ── Card colour mappings ────────────────────────────────── */
+.feature-card--green {
+  --card-bg:     var(--theme-green-bg);
+  --card-text:   var(--theme-green-text);
+  --card-accent: var(--theme-green-accent);
+}
+
+.feature-card--magenta {
+  --card-bg:     var(--theme-magenta-bg);
+  --card-text:   var(--theme-magenta-text);
+  --card-accent: var(--theme-magenta-accent);
+}
+
+.feature-card--cyan {
+  --card-bg:     var(--theme-cyan-bg);
+  --card-text:   var(--theme-cyan-text);
+  --card-accent: var(--theme-cyan-accent);
+}
+
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page layout ─────────────────────────────────────────── */
+body {
+  font-family: var(--font-family);
+  background-color: var(--page-bg);
+  color: var(--header-color);
+  padding: 3rem 1.5rem;
+}
+
+/* ── Section ─────────────────────────────────────────────── */
+.feature-cards {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  background-color: var(--section-bg);
+  border-radius: 28px;
+}
+
+.feature-cards__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.feature-cards__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--header-color);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.feature-cards__subtitle {
+  font-size: 1.1rem;
+  color: var(--subtitle-color);
+}
+
+
+/* ── Grid ────────────────────────────────────────────────── */
+.feature-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+  align-items: start; /* cards don't stretch to match tallest – each sizes to content */
+}
+
+/* ── Card block ──────────────────────────────────────────── */
+.feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Top padding: breathing room for text.
+     Bottom padding: space reserved for the absolute-positioned illustration. */
+  padding: 2rem 1rem 10rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  min-height: 420px;
+}
+
+.feature-card:focus-visible {
+  outline: 3px solid var(--card-text);
+  outline-offset: 4px;
+}
+
+/* ── Card elements ───────────────────────────────────────── */
+.feature-card__eyebrow {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.feature-card__stat {
+  /* clamp: shrinks on narrow cards so long numbers (501,000,000) never overflow */
+  font-size: clamp(1.4rem, 5vw, 3.3rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card__desc {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ── Card illustration ───────────────────────────────────── */
+.feature-card__graphic {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none; /* decorative – never receives clicks */
+  max-height:100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+
+.feature-card__graphic svg {
+  display: block;
+  color: var(--card-accent); /* inherits currentColor for strokes */
+}
+
+.feature-card--green   .feature-card__graphic svg,
+.feature-card--magenta .feature-card__graphic svg { width: auto; height: 100%; }
+
+.feature-card--cyan    .feature-card__graphic svg { width: 100%; }
+
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (min-width: 980px) {
+  /* First card tilts left, middle stays flat, last tilts right */
+.feature-card:nth-child(1) { transform: rotate(2deg); margin-top: -7px;}
+.feature-card:nth-child(2) { transform: rotate(0deg);  }
+.feature-card:nth-child(3) { transform: rotate(2deg); margin-top: 7px; }
+
+/* If more than 3 cards are ever added, repeat the pattern */
+.feature-card:nth-child(3n + 1) { transform: rotate(2deg);margin-top: -7px; }
+.feature-card:nth-child(3n + 2) { transform: rotate(0deg);  }
+.feature-card:nth-child(3n + 3) { transform: rotate(2deg);margin-top: 7px;}
+}
