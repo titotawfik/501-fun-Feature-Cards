@@ -23,7 +23,7 @@ This module rebuilds the cards as native semantic HTML text combined with vector
 | **SEO & Indexability** | **Excellent.** Googlebot crawls and indexes statistics natively, boosting ranking potentials. | **Poor.** Numbers are invisible to search engines unless poorly parsed via slow OCR. |
 | **Web Accessibility** | **Native AAA Compliance.** Reads naturally for assistive tech. SVGs are hidden from screen readers. | **Poor.** Fails basic WCAG standards when `alt` text is missing. |
 | **Operational Agility** | **Instant Updates.** Editors modify text in the CMS in seconds; zero design loops. | **Hours/Days.** Requires designer file edits, exports, and developer deployments. |
-| **Localization & A/B Testing** | **Seamless.** Instantly translates text or swaps card order via JSON files or CMS variations. | **Bloated.** Requires generating separate image assets for each language and experiment. |
+| **Localisation & A/B Testing** | **Seamless.** Instantly translates text or swaps card order via JSON files or CMS variations. | **Bloated.** Requires generating separate image assets for each language and experiment. |
 | **Performance** | **High Speed.** Under 5KB total size. Zero CLS. High Lighthouse performance. | **Slow.** Large files trigger bandwidth costs and layout reflows. |
 | **Visual Quality** | **Infinite Resolution.** Vectors stay perfectly crisp on 4K, mobile, and Retina displays. | **Blurry.** Pixelates on modern high-DPI screens. |
 | **Dynamic UX** | **Interactive.** Smooth color shifts, keyframe entry fades, and hover scales. | **Static.** Flat images cannot respond to CSS variables or dark mode triggers. |
@@ -107,7 +107,7 @@ Accessibility was designed into the markup from the beginning:
 
 ### Screen Readers & Semantics
 * **Logical Reading Order:** Screen readers announce cards in a natural sequence: `"More than [metric] delighted guests"`.
-* **Aria Optimization:** cards include descriptive `aria-label` tags.
+* **Aria Optimisation:** cards include descriptive `aria-label` tags.
 * **Vector Hiding:** SVGs use `aria-hidden="true"` since they are decorative, preventing screen readers from reading vector code blocks.
 
 ### Keyboard Compatibility
@@ -209,7 +209,7 @@ if( $cards ): ?>
 
 ---
 
-## 6. Performance & Optimizations
+## 6. Performance & Optimisations
 
 * **Zero cumulative Layout Shift (CLS):** Card grids and graphic height ratios are set in CSS. When SVGs load dynamically, the layout dimensions remain identical, preventing rendering layout shifts.
 ---
