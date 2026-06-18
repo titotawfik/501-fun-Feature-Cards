@@ -1,0 +1,29 @@
+[
+  {
+    "id": "delighted-guests",
+    "title": "Plus de",
+    "stat": "6,000,000",
+    "description": "visiteurs ravis",
+    "url": "#guests",
+    "svgUrl": "svgs/cardtwo.svg",
+    "theme": "green"
+  },
+  {
+    "id": "countries-worldwide",
+    "title": "Présents dans",
+    "stat": "45",
+    "description": "pays",
+    "url": "#locations",
+    "svgUrl": "svgs/cardone.svg",
+    "theme": "magenta"
+  },
+  {
+    "id": "darts-thrown",
+    "title": "Plus de",
+    "stat": "501,000,000",
+    "description": "fléchettes lancées",
+    "url": "#darts",
+    "svgUrl": "svgs/cardthree.svg",
+    "theme": "cyan"
+  }
+]
