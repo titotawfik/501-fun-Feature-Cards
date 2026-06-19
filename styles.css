@@ -143,7 +143,7 @@ body {
 
 .feature-card__stat {
   /* clamp: shrinks on narrow cards so long numbers (501,000,000) never overflow */
-  font-size: clamp(1.4rem, 5vw, 3.3rem);
+  font-size: clamp(1.4rem, 4.5vw, 3.3rem);
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -0.05em;
@@ -181,7 +181,7 @@ body {
 
 
 /* ── Responsive ──────────────────────────────────────────── */
-@media (min-width: 980px) {
+@media (min-width: 1024px) {
   /* First card tilts left, middle stays flat, last tilts right */
 .feature-card:nth-child(1) { transform: rotate(2deg); margin-top: -7px;}
 .feature-card:nth-child(2) { transform: rotate(0deg);  }
