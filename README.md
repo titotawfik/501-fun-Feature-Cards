@@ -3,6 +3,8 @@
 An engineering-grade, accessible, performant, and CMS-agnostic marketing stats module built to replace static image-based landing page cards.
 
 ---
+## Live view
+https://titotawfik.github.io/501-fun-Feature-Cards/ 
 
 ## 1. Overview & Business Case
 
