@@ -20,9 +20,13 @@ Marketing pages at 501 Entertainment previously relied on static raster images (
 
 ### The Solution: Dynamic HTML + Vector SVGs driven by JSON files as a data layer (CMS agnostic)
 This module rebuilds the cards as native semantic HTML text combined with vector line-art SVGs.
+
 The module is build with scability and flexiblity in mind, SVG illustrations, cards text content and card theme settings and the number of cards can be easily updated via json files and can be easily integrated with any CMS (HubSpot, WordPress, Contentful, etc.) by treating each card as a repeatable component.
+
 The module supports theme switching, so we can change the theme of the cards by just changing the theme in the json file, which is very convenient. Current cards use three themes: green, magenta, and cyan. We can add more themes in the future if needed. Each theme is a class on the .feature-card class.
+
 The module is also support multi language (for now only English and French) by just changing the lang attribute in index.html file, which is very convenient.
+
 The module data driven is very convenient for Marketing Agility A/B testing & SEO-Schema markups. Since the data is driven by JSON files, we can easily update the content of the cards in the JSON files, and the changes will be reflected in the cards and the SEO-Schema markups automatically.
 
 ### Decision Matrix: Native HTML/SVG vs. Flat Raster Images
