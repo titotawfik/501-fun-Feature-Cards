@@ -130,13 +130,13 @@ function animateValue(obj) {
     
     const currentNumber = Math.floor(easeProgress * targetNumber);
     // Format back with commas
-    obj.innerHTML = currentNumber.toLocaleString('en-US');
+    obj.innerHTML = currentNumber.toLocaleString('en-UK');
 
     if (progress < 1) {
       window.requestAnimationFrame(step);
     } else {
       // Ensure the final value perfectly matches the target at the end
-      obj.innerHTML = targetNumber.toLocaleString('en-US'); 
+      obj.innerHTML = targetNumber.toLocaleString('en-UK'); 
     }
   };
   
